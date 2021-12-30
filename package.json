@@ -1,0 +1,40 @@
+{
+  "name": "grocery",
+  "version": "0.0.0",
+  "packageManager": "pnpm@6.24.3",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/grocery.umd.js",
+  "module": "./dist/grocery.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/grocery.es.js",
+      "require": "./dist/grocery.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .ts,.js,.vue ."
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.7.9",
+    "vue": "^3.2.25",
+    "vue-tsc": "^0.30.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.25"
+  }
+}
